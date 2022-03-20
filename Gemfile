@@ -5,12 +5,17 @@ ruby '2.7.2'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'puma', '~> 5.0'
+
 gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'uglifier'
 gem 'twitter-bootstrap-rails'
+
 gem 'devise'
+gem 'devise-i18n'
+gem 'russian'
+
 gem 'pry-rails'
 gem 'awesome_print'
 gem 'colorize'

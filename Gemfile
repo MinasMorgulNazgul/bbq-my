@@ -11,6 +11,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'uglifier'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'pry-rails'
+gem 'awesome_print'
+gem 'colorize'
 
 group :production do
   gem 'pg'

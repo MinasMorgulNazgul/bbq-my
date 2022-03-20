@@ -14,7 +14,7 @@ gem 'twitter-bootstrap-rails'
 
 gem 'devise'
 gem 'devise-i18n'
-gem 'russian'
+gem 'rails-i18n'
 
 gem 'pry-rails'
 gem 'awesome_print'

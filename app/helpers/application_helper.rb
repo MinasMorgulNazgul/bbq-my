@@ -4,3 +4,5 @@ module ApplicationHelper
     asset_path('avatar1.jpg')
   end
 end
+
+

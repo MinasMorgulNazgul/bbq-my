@@ -1,25 +1,28 @@
 <h2>Change your password</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
+<div class="row justify-content-md-center">
+  <div class="col-md-4 border rounded-bottom shadow mb-3 pt-2">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+      <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <div class="mb-3">
+        <%= f.label :new_password, class: 'form-label' %><br />
+        <% if @minimum_password_length %>
+          <em><%= t('text.password_length', length: @minimum_password_length) %></em>
+        <% end %>
+        <%= f.password_field :password, class: 'form-control shadow-sm' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :new_password_confirmation, class: 'form-label' %><br />
+        <%= f.password_field :password_confirmation, class: 'form-control shadow-sm' %>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-1">
+        <%= f.submit t('buttons.save'), class: 'btn btn-primary shadow-sm rounded-pil' %>
+      </div>
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    <%= render "users/shared/links" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

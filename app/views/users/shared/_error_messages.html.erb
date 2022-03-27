@@ -1,5 +1,6 @@
 <% if resource.errors.any? %>
   <div class="alert alert-danger alert-dismissible" role="alert">
+    <h4><%= I18n.t :error, count: resource.errors.count %></h4>
     <ul class="mb-0">
       <% resource.errors.full_messages.each do |message| %>
         <li><%= message %></li>

@@ -33,6 +33,7 @@ ru:
   activerecord:
     attributes:
       user:
+        default_name: 'Товарищ №'
         avatar: 'Аватар'
         email: 'Email:'
         name: 'Имя:'
@@ -86,9 +87,15 @@ ru:
     users:
       updated: Вы обновили свой профиль
 
+
   devise:
     omniauth_callbacks:
       authentication_error: ошибка аутентификации
       email_missing: отсутствует email
       failure: Вы не можете войти в систему с учетной записью из %{kind}, т.к. "%{reason}".
       success: Вход в систему выполнен с учетной записью из %{kind}.
+
+  error:
+    one: 'В вашей форме %{count} ошибка:'
+    few: 'В вашей форме %{count} ошибки:'
+    many: 'В вашей форме %{count} ошибок:'

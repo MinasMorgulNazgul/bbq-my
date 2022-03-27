@@ -68,6 +68,7 @@ ru:
     change: Изменить
     event_create: Создать событие
     event_delete: Удалить событие
+    are_you_sure: Вы уверены?
     forgot_password: Забыли пароль?
     log_out: Выйти
     password_edit: Сменить пароль
